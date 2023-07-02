@@ -28,7 +28,7 @@ class CryptoApp : Application(), Configuration.Provider{
             "Bitcoin", "15.0=25.0"
         ).commit()
 
-        val request = PeriodicWorkRequestBuilder<BackgroundWorker>(15, TimeUnit.MINUTES)
+        val request = PeriodicWorkRequestBuilder<BackgroundWorker>(1, TimeUnit.MINUTES)
             .build()
 
         WorkManager.getInstance(this).enqueueUniquePeriodicWork(
